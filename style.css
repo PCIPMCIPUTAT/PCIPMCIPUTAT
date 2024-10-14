@@ -1,0 +1,394 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffdfd;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+}
+
+.organization-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFC700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #FFC700;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+    color: #FFC700;
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #FFC700;
+    color: #fff;
+    padding: 5rem 0;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-section p {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background-color: #994D1C;
+    color: #FFC700;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.cta-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* About Section */
+.about-section {
+    background-color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+}
+/* Carousel image settings */
+.carousel-item img {
+    width: 100%; /* Gambar memenuhi lebar carousel */
+    max-width: 100%; /* Pastikan gambar tidak melebihi lebar kontainer */
+    height: auto; /* Jaga rasio aspek gambar */
+    display: block; /* Jaga agar gambar tetap berada di tengah */
+}
+
+/* Carousel container settings */
+.carousel-inner {
+    width: 100%; /* Memastikan carousel menempati 100% dari kontainernya */
+    max-width: 1200px; /* Batas maksimum lebar carousel agar tidak terlalu besar */
+    margin: 0 auto; /* Carousel tetap berada di tengah */
+    height: auto; /* Tinggi carousel mengikuti konten (gambar) */
+}
+
+/* Carousel prev and next buttons */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background: none; /* Menghapus ikon default */
+    font-size: 2em; /* Ukuran besar untuk tanda lebih kecil dan lebih besar */
+    color: black; /* Warna teks tombol */
+}
+
+.carousel-control-prev-icon:before {
+    content: '<'; /* Simbol untuk tombol Previous */
+}
+
+.carousel-control-next-icon:before {
+    content: '>'; /* Simbol untuk tombol Next */
+}
+
+/* Custom alignment for prev and next buttons */
+.carousel-control-prev,
+.carousel-control-next {
+    width: 5%; /* Lebar tombol untuk area klik */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-control-prev {
+    left: 0; /* Tombol Prev di kiri */
+}
+
+.carousel-control-next {
+    right: 0; /* Tombol Next di kanan */
+}
+
+/* Ensure the carousel stays responsive */
+.carousel {
+    max-height: 500px; /* Batas maksimum tinggi carousel */
+    width: 100%; /* Carousel mengikuti lebar container */
+    overflow: hidden; /* Menghindari gambar keluar dari batas carousel */
+}
+
+
+/* Image Information Section (Informasi Terbaru) */
+.info-section {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center; /* Menyelaraskan teks di tengah */
+}
+
+.info-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.news-container {
+    display: flex;
+    justify-content: center; /* Memusatkan konten secara horizontal */
+    gap: 20px;
+    flex-wrap: wrap; /* Membuat konten tetap rapi saat layar diperkecil */
+}
+
+.news-card {
+    background-color: #f9f9f9; /* Warna latar belakang untuk kartu berita */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 300px; /* Lebar tetap untuk setiap kartu */
+    text-align: left; /* Teks di dalam kartu akan rata kiri */
+}
+
+.info-image {
+    width: 100%;
+    height: auto; /* Menjaga rasio gambar */
+    border-radius: 10px;
+}
+
+.news-title {
+    font-size: 1.5rem;
+    margin: 10px 0 5px 0;
+}
+
+.news-date {
+    font-size: 0.9rem;
+    color: gray; /* Warna untuk tanggal */
+}
+
+.news-description {
+    font-size: 1rem;
+    color: #333; /* Warna teks deskripsi */
+}
+
+/* Responsive Design for News Cards */
+@media screen and (max-width: 768px) {
+    .news-container {
+        flex-direction: column; /* Membuat kartu berita diatur vertikal pada layar kecil */
+        align-items: center; /* Memusatkan kartu berita */
+    }
+}
+/* Gaya untuk Container Tombol */
+.button-container {
+    display: flex; /* Mengatur elemen dalam satu baris */
+    justify-content: center; /* Memusatkan tombol secara horizontal */
+    margin: 20px 0; /* Jarak atas dan bawah */
+}
+
+/* Gaya untuk Tombol */
+.button {
+    display: inline-block; /* Membuat tombol dalam satu baris */
+    padding: 10px 20px; /* Padding atas dan bawah, serta kiri dan kanan */
+    background-color: #FFC700; /* Warna latar belakang */
+    color: white; /* Warna teks */
+    text-align: center; /* Mengatur teks agar berada di tengah */
+    text-decoration: none; /* Menghapus garis bawah pada link */
+    border-radius: 5px; /* Sudut melengkung */
+    transition: background-color 0.3s; /* Transisi warna latar belakang */
+    font-size: 16px; /* Ukuran font */
+}
+
+/* Gaya saat hover */
+.button:hover {
+    background-color: #e0b600; /* Warna latar belakang saat hover */
+}
+
+
+.services-button {
+    background-color: #994D1C;
+    color: #FFC700;
+    padding: 0.75rem 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.services-button:hover {
+    background-color: #f0f0f0;
+    color: #994D1C;
+}
+
+
+/* Layanan Kami */
+.services-section {
+    padding: 50px 20px;
+    background-color: #f9f9f9; /* Warna latar belakang yang lembut */
+    text-align: center; /* Memusatkan teks */
+}
+
+.service-cards {
+    display: flex; /* Menggunakan flexbox untuk tata letak */
+    justify-content: center; /* Memusatkan kartu layanan */
+    flex-wrap: wrap; /* Membiarkan kartu untuk membungkus ke baris baru jika perlu */
+    gap: 20px; /* Jarak antar kartu */
+}
+
+.service-card {
+    background-color: #fff; /* Warna latar belakang kartu */
+    border: 1px solid #ccc; /* Garis batas */
+    border-radius: 10px; /* Sudut melengkung */
+    padding: 20px; /* Ruang dalam kartu */
+    width: 250px; /* Lebar kartu (dapat disesuaikan) */
+    max-width: 90%; /* Maksimal lebar 90% dari wadahnya */
+    text-decoration: none; /* Menghapus garis bawah pada tautan */
+    color: #333; /* Warna teks */
+    transition: transform 0.2s, box-shadow 0.2s; /* Efek transisi saat hover */
+}
+
+.service-card:hover {
+    transform: scale(1.05); /* Memperbesar sedikit saat hover */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Efek bayangan saat hover */
+}
+
+.service-card h3 {
+    margin: 0; /* Menghapus margin dari judul */
+    font-size: 1.2em; /* Ukuran font untuk judul */
+}
+
+.service-card p {
+    font-size: 0.9em; /* Ukuran font untuk deskripsi */
+    color: #666; /* Warna deskripsi */
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    .service-card {
+        width: 100%; /* Kartu mengambil lebar penuh pada layar kecil */
+    }
+}
+
+
+/* Contact Section */
+.contact-section {
+    background-color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+}
+
+/* Social Media Links */
+.social-media {
+    background-color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.social-media h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.social-links img {
+    width: 40px;
+    height: 40px;
+}
+
+/* Footer */
+footer {
+    background-color: white;
+    color: #994D1C;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* Responsive Layout */
+@media screen and (max-width: 1200px) {
+    body, .navbar, .hero-section, .about-section, .services-section, .contact-section {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .service-cards {
+        flex-direction: column;
+    }
+
+    .image-container {
+        flex-direction: column;
+    }
+
+    .info-image {
+        width: 90%; /* Menyesuaikan ukuran gambar di layar kecil */
+    }
+
+    .service-card {
+        width: 100%; /* Menyesuaikan lebar kartu layanan di layar kecil */
+    }
+}
