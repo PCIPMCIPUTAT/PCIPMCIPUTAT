@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Susunan Pengurus Organisasi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+       /* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fffdfd;
+    line-height: 1.6;
+    width: 1200px; /* Ukuran tetap untuk body */
+    margin: 0 auto; /* Mengatur body agar tetap di tengah */
+}
+
+/* Navbar */
+.navbar {
+    position: fixed; /* Menjadikan navbar tetap di atas */
+    top: 0;          /* Posisi di atas */
+    left: 0;         /* Posisi di kiri */
+    right: 0;        /* Posisi di kanan */
+    background-color: #ffffff;
+    padding: 20px; /* Padding tetap */
+    z-index: 1000;  /* Pastikan navbar berada di atas konten lainnya */
+}
+
+/* Footer */
+footer {
+    position: fixed; /* Menjadikan footer tetap di bawah */
+    bottom: 0;       /* Posisi di bawah */
+    left: 0;         /* Posisi di kiri */
+    right: 0;        /* Posisi di kanan */
+    background-color: white;
+    color: #994D1C;
+    text-align: center;
+    padding: 20px; /* Padding tetap */
+}
+
+/* Pengurus Section */
+.pengurus-section {
+    background-color: #FFC700;
+    padding: 80px; /* Padding tetap */
+    text-align: center;
+}
+
+/* Keseben */
+.keseben {
+    margin-bottom: 40px; /* Jarak antar keseben */
+}
+
+.pengurus-list {
+    display: flex;
+    flex-wrap: wrap; /* Membuat baris baru jika terlalu banyak elemen */
+    justify-content: space-around; /* Menyebar pengurus dengan jarak tetap */
+}
+
+.pengurus-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px; /* Padding tetap */
+    width: 180px; /* Lebar tetap */
+    margin: 10px; /* Jarak antar pengurus */
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.pengurus-card img {
+    width: 100%; /* Gambar akan menyesuaikan dengan lebar kartu */
+    height: 200px; /* Tinggi gambar tetap */
+    object-fit: cover; /* Gambar akan crop secara proporsional */
+    border-radius: 10px; /* Sudut melengkung pada gambar */
+}
+
+.keseben .pengurus-card img {
+    width: 100%; /* Gambar akan menyesuaikan dengan lebar kartu */
+    height: 250px; /* Gambar untuk keseben lebih besar */
+    object-fit: cover;
+}
+
+.pengurus-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Atur nama sejajar */
+.pengurus-card p h4 {
+    font-size: 14px; /* Ukuran font untuk jabatan */
+    margin: 5px 0;
+}
+
+/* Aturan khusus untuk Keseben agar lebih besar */
+.keseben .pengurus-card {
+    width: 220px; /* Lebar kartu keseben lebih besar */
+    font-size: 20px; /* Ukuran font lebih besar */
+}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <div class="logo-container">
+                <img src="logo.png" alt="Logo Organisasi" class="logo" style="width: 60px; height: 60px;">
+                <h1 class="organization-name" style="font-size: 28px; color: #FFC700;">PC IPM CIPUTAT</h1>
+            </div>
+            <ul class="nav-links" style="list-style: none; display: flex; gap: 20px;">
+                <li><a href="index.html" style="color: #FFC700; text-decoration: none; font-size: 16px;">Beranda</a></li>
+                <li><a href="index.html" style="color: #FFC700; text-decoration: none; font-size: 16px;">Tentang Kami</a></li>
+                <li><a href="contact.html" style="color: #FFC700; text-decoration: none; font-size: 16px;">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Pengurus Section -->
+    <section class="pengurus-section">
+        <h2>Susunan Pengurus</h2>
+
+        <!-- Keseben -->
+        <div class="keseben">
+            <h3>Bidang Umum</h3>
+            <div class="pengurus-list">
+                <div class="pengurus-card">
+                    <img src="sekum.jpg" alt="Keseben 1">
+                    <h3>Selfia Adinda Salsabila</h3>
+                    <p><h4>Sekretaris Umum</h4></p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="ketuaumum.png" alt="Keseben 2">
+                    <h3>Zaidaan Al Farouq</h3>
+                    <p><h4>Ketua Umum</h4></p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="bendum.png" alt="Keseben 3">
+                    <h3>Nur Juniawati</h3>
+                    <p><h4>Bendahara Umum</h4></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bidang 1 -->
+        <div class="bidang">
+            <h3>Bidang Perkaderan</h3>
+            <div class="pengurus-list">
+                <div class="pengurus-card">
+                    <img src="kabider.png" alt="Ketua Bidang Perkaderan">
+                    <h3>Hafizhhoh Nur Afifah</h3>
+                    <p>Ketua Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="sekbidkader.jpg" alt="Sekretaris Bidang Perkaderan">
+                    <h3>Adelia Rizki Ananda</h3>
+                    <p>Sekretaris Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angper1.jpg" alt="Anggota 1">
+                    <h3>Ibnu Zaki Hisyam</h3>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angper2.jpg" alt="Anggota 2">
+                    <h3>Anindya Aura Loubna</h3>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angper3.jpg" alt="Anggota 3">
+                    <h3>Ratna Dewati Rasrendia</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bidang 2 -->
+        <div class="bidang">
+            <h3>Bidang Kajin Dakwah Islam</h3>
+            <div class="pengurus-list">
+                <div class="pengurus-card">
+                    <img src="kabidkdi.png" alt="Ketua Bidang Kajin Dakwah Islam">
+                    <h3>Irfan Fajar</h3>
+                    <p>Ketua Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="sekbidkdi.jpg" alt="Sekretaris Bidang Kajin Dakwah Islam">
+                    <h3>Aida Nutmain Nasution</h3>
+                    <p>Sekretaris Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angkdi1.jpg" alt="Anggota 1">
+                    <h3>Puti Sabrina</h3>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angkdi2.jpg" alt="Anggota 2">
+                    <h3>Rendy Adriansyah</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bidang 3 -->
+        <div class="bidang">
+            <h3>Bidang Pengkajian Ilmu Pengetahuan</h3>
+            <div class="pengurus-list">
+                <div class="pengurus-card">
+                    <img src="kabidpip.png" alt="Ketua Bidang Pengkajian Ilmu Pengetahuan">
+                    <h3>Fahrezi Saputra Darmawan</h3>
+                    <p>Ketua Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="sekbidpip.jpg" alt="Sekretaris Bidang Pengkajian Ilmu Pengetahuan">
+                    <h3>Wardatul Munawaroh</h3>
+                    <p>Sekretaris Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angpip1.jpg" alt="Anggota 1">
+                    <h3>Krishna Haryatama Jaya Ningrat</h3>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angpip2.jpg" alt="Anggota 2">
+                    <h3>Yuniar Syalsabilah</h3>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angpip3.jpg" alt="Anggota 3">
+                    <h3>Syairani Aprillia Mesa</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bidang 4 -->
+        <div class="bidang">
+            <h3>Bidang Apresiasi Seni Budaya dan Olahraga</h3>
+            <div class="pengurus-list">
+                <div class="pengurus-card">
+                    <img src="kabidasbo.jpg" alt="Ketua Bidang Apresiasi Seni Budaya dan Olahraga">
+                    <h3>Elang Razan Al Ghifari</h3>
+                    <p>Ketua Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="sekbidasbo.jpg" alt="Sekretaris Bidang Apresiasi Seni Budaya dan Olahraga">
+                    <h3>Haudi Kautsar Aulia Rahman</h3>
+                    <p>Sekretaris Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angasbo1.jpg" alt="Anggota 1">
+                    <h3>Aulia Fatma Sari</h3>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angasbo2.jpg" alt="Anggota 2">
+                    <h3>Nizham Muhammad Akbar</h3>
+                </div>
+            </div>
+        </div>
+        <!-- Bidang 5 -->
+        <div class="bidang"></div>
+            <h3>Bidang Advokasi</h3>
+            <div class="pengurus-list">
+                <div class="pengurus-card">
+                    <img src="kabidadvo.png" alt="Ketua Bidang Advokasi">
+                    <h3>Sayidah Humaira</h3>
+                    <p>Ketua Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="sekbidadvo.jpg" alt="Sekretaris Bidang Advokasi">
+                    <h3>Inna Fahima</h3>
+                    <p>Sekretaris Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angadvo1.jpg" alt="Anggota 1">
+                    <h3>Keisha Alviani</h3>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angadvo2.jpg" alt="Anggota 2">
+                    <h3>Atina Raisha Sofyan</h3>
+                </div>
+            </div>
+        </div>
+        <!-- Bidang 5 -->
+        <div class="bidang">
+            <h3>Bidang Pekembangan Kreativitas dan Kewirausahawan</h3>
+            <div class="pengurus-list">
+                <div class="pengurus-card">
+                    <img src="kabidpkk.jpg" alt="Ketua Bidang Pekembangan Kreativitas dan Kewirausahawan ">
+                    <h3>Abdulmalikul Mulki</h3>
+                    <p>Ketua Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="sekbidpkk.jpg" alt="Sekretaris Bidang Pekembangan Kreativitas dan Kewirausahawan">
+                    <h3>Fira Damayanti</h3>
+                    <p>Sekretaris Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angpkk1.jpg" alt="Anggota 1">
+                    <h3>Nur Azizah Adelia Putri</h3>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angpkk2.jpg" alt="Anggota 2">
+                    <h3>Alfira Putri Rahmadia</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bidang 6 -->
+        <div class="bidang">
+            <h3>Bidang Ipwawati</h3>
+            <div class="pengurus-list">
+                <div class="pengurus-card">
+                    <img src="kabidipma.jpg" alt="Ketua Bidang Ipwawati">
+                    <h3>Aisyah Ayu Saphira Febriana </h3>
+                    <p>Ketua Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="sekbidipma.jpg" alt="Sekretaris Bidang Ipwawati">
+                    <h3>Cantika Bunga Maharani</h3>
+                    <p>Sekretaris Bidang</p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angipma1.jpg" alt="Anggota 1">
+                    <h3>Saskia Aulia Agustia</h3>
+                </div>
+                <div class="pengurus-card">
+                    <img src="angipma2.jpg" alt="Anggota 2">
+                    <h3>Khayla Nisrina Qafzaneeta Gunawan</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Organisasi. Semua hak dilindungi.</p>
+    </footer>
+</body>
+</html>
