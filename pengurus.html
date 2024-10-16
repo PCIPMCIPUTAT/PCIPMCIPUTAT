@@ -129,7 +129,37 @@
             transform: translateY(-10px);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
+        /* Pengaturan dasar untuk kartu pengurus */
+.pengurus-card {
+    flex: 1 1 300px; /* Agar responsif, minimal 300px */
+    text-align: center;
+    padding: 15px;
+    margin: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    background-color: #fff;
+}
 
+/* Mengatur gambar agar responsif */
+.pengurus-card img {
+    width: 100%; /* Gambar akan memenuhi lebar kontainer */
+    max-width: 200px; /* Maksimal lebar gambar */
+    height: auto; /* Menjaga proporsi gambar */
+    border-radius: 50%; /* Agar gambar bulat */
+    transition: transform 0.3s ease; /* Animasi saat hover */
+}
+
+/* Animasi gambar saat di hover */
+.pengurus-card img:hover {
+    transform: scale(1.1); /* Membesar saat di hover */
+}
+
+/* Flexbox pengurus list */
+.pengurus-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
       /* Contact Section */
 .contact-section {
     background-color: #fff;
