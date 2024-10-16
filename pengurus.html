@@ -19,55 +19,106 @@
             line-height: 1.6;
         }
 
-        /* Sticky Navbar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #fff;
-            padding: 15px 20px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
+       header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
 
-        .navbar .logo-container {
-            display: flex;
-            align-items: center;
-        }
+@media (min-width: 1024px) {
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-        .navbar img.logo {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-        }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+    }
 
-        .navbar h1 {
-            color: #FFC700;
-            font-size: 24px;
-        }
+    .navbar ul {
+        display: flex;
+        gap: 15px;
+    }
 
-        .navbar ul {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
+    .main-content {
+        display: flex;
+        justify-content: space-between;
+    }
 
-        .navbar ul li {
-            display: inline;
-        }
+    .sidebar {
+        width: 30%;
+        padding: 20px;
+        background-color: #f1f1f1;
+    }
 
-        .navbar ul li a {
-            color: #FFC700;
-            text-decoration: none;
-            font-size: 16px;
-            transition: color 0.3s ease;
-        }
+    .content {
+        width: 65%;
+        padding: 20px;
+    }
+}
 
-        .navbar ul li a:hover {
-            color: #333;
-        }
+/* Gaya untuk mobile */
+@media (max-width: 1023px) {
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navbar ul {
+        display: block;
+        text-align: center;
+    }
+
+    .main-content {
+        display: block;
+    }
+
+    .sidebar, .content {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    margin-right: 1rem;
+}
+
+.organization-name {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #FFC700;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #FFC700;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.nav-links a:hover {
+    color: #FFC700;
+}
 
         /* Section Style */
         .pengurus-section {
