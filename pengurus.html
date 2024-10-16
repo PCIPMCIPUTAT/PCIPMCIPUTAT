@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="logo.png" type="image/x-icon"> <!-- Ubah logo2.ico ke favicon Anda -->
+    <link rel="icon" href="logo.png" type="image/x-icon">
     <title>Susunan Pengurus Organisasi</title>
     <link rel="stylesheet" href="style.css">
     <style>
-             * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -74,7 +74,6 @@
             background-color: #FFC700;
             padding: 60px 20px;
             text-align: center;
-            transition: background-color 0.3s ease;
         }
 
         .pengurus-section h2 {
@@ -100,11 +99,20 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
+        /* Membuat gambar responsif dan tidak terpotong */
         .pengurus-card img {
             width: 100%;
-            height: 200px;
-            object-fit: cover;
+            height: auto;
+            max-height: 250px; /* Membatasi tinggi maksimal gambar */
+            object-fit: contain; /* Membuat gambar tetap proporsional tanpa terpotong */
             border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Animasi pada hover */
+        .pengurus-card:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .pengurus-card h3 {
@@ -168,7 +176,9 @@
             }
 
             .pengurus-card img {
-                height: 180px;
+                max-width: 100%;
+                height: auto;
+                object-fit: contain; /* Menghindari gambar terpotong */
             }
 
             .pengurus-card h3 {
@@ -201,22 +211,22 @@
     <section class="pengurus-section">
         <h2>Susunan Pengurus</h2>
 
-        <!-- Keseben -->
+        <!-- Bidang Umum -->
         <div class="keseben">
             <h3>Bidang Umum</h3>
             <div class="pengurus-list">
                 <div class="pengurus-card">
-                    <img src="sekum.jpg" alt="Keseben 1">
+                    <img src="sekum.jpg" alt="Sekretaris Umum">
                     <h3>Selfia Adinda Salsabila</h3>
                     <p><h4>Sekretaris Umum</h4></p>
                 </div>
                 <div class="pengurus-card">
-                    <img src="ketuaumum.png" alt="Keseben 2">
+                    <img src="ketuaumum.png" alt="Ketua Umum">
                     <h3>Zaidaan Al Farouq</h3>
                     <p><h4>Ketua Umum</h4></p>
                 </div>
                 <div class="pengurus-card">
-                    <img src="bendum.png" alt="Keseben 3">
+                    <img src="bendum.png" alt="Bendahara Umum">
                     <h3>Nur Juniawati</h3>
                     <p><h4>Bendahara Umum</h4></p>
                 </div>
@@ -405,7 +415,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>&copy; 2024 Organisasi. Semua hak dilindungi.</p>
     </footer>
