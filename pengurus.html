@@ -33,91 +33,59 @@
         padding: 20px;
     }
 
-    .navbar {
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-    }
-
-    .navbar ul {
-        display: flex;
-        gap: 15px;
-    }
-
-    .main-content {
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .sidebar {
-        width: 30%;
-        padding: 20px;
-        background-color: #f1f1f1;
-    }
-
-    .content {
-        width: 65%;
-        padding: 20px;
-    }
-}
-
-/* Gaya untuk mobile */
-@media (max-width: 1023px) {
-    .container {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .navbar ul {
-        display: block;
-        text-align: center;
-    }
-
-    .main-content {
-        display: block;
-    }
-
-    .sidebar, .content {
-        width: 100%;
-        padding: 10px;
-    }
-}
-
-.logo-container {
+/* Style Navbar */
+.navbar {
+    background-color: #fff;
+    padding: 1rem 2rem;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    width: 60px;
-    height: 60px;
-    margin-right: 1rem;
-}
-
-.organization-name {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #FFC700;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 .nav-links li {
-    display: inline;
+    display: inline-block;
 }
 
 .nav-links a {
     color: #FFC700;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 
 .nav-links a:hover {
-    color: #FFC700;
+    color: #333;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: left;
+    }
+
+    .nav-links li {
+        margin-bottom: 0.5rem;
+    }
+}
+
 }
 
         /* Section Style */
@@ -278,20 +246,20 @@ footer {
     </style>
 </head>
 <body>
-    <!-- Navbar -->
     <header>
-        <nav class="navbar">
-            <div class="logo-container">
-                <img src="logo.png" alt="Logo Organisasi" class="logo" style="width: 60px; height: 60px;">
-                <h1 class="organization-name" style="font-size: 28px; color: #FFC700;">PC IPM CIPUTAT</h1>
-            </div>
-            <ul class="nav-links" style="list-style: none; display: flex; gap: 20px;">
-                <li><a href="index.html" style="color: #FFC700; text-decoration: none; font-size: 16px;">Beranda</a></li>
-                <li><a href="index.html" style="color: #FFC700; text-decoration: none; font-size: 16px;">Tentang Kami</a></li>
-                <li><a href="contact.html" style="color: #FFC700; text-decoration: none; font-size: 16px;">Kontak</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Organisasi" class="logo" style="width: 60px; height: 60px;">
+            <h1 class="organization-name" style="font-size: 28px; color: #FFC700;">PC IPM CIPUTAT</h1>
+        </div>
+        <ul class="nav-links" style="list-style: none; display: flex; gap: 20px;">
+            <li><a href="index.html" style="color: #FFC700; text-decoration: none; font-size: 16px;">Beranda</a></li>
+            <li><a href="index.html" style="color: #FFC700; text-decoration: none; font-size: 16px;">Tentang Kami</a></li>
+            <li><a href="contact.html" style="color: #FFC700; text-decoration: none; font-size: 16px;">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
+
 
     <section class="pengurus-section">
         <h2>Susunan Pengurus</h2>
