@@ -7,7 +7,7 @@
     <title>Susunan Pengurus Organisasi</title>
     <link rel="stylesheet" href="style.css">
     <style>
-       * {
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -19,48 +19,64 @@
             line-height: 1.6;
         }
 
-        /* Header & Navbar */
         header {
             background-color: #ffffff;
-            color: #fff;
             padding: 1rem 0;
             text-align: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1200px;
+        }
+
+        /* Navbar */
         .navbar {
-            background-color: #fff;
-            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
+            padding: 0.5rem 0;
         }
 
-        .navbar ul {
+        .navbar .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo-container img {
+            width: 50px;
+            height: 50px;
+            margin-right: 1rem;
+        }
+
+        .navbar .nav-links {
             list-style: none;
             display: flex;
-            gap: 1.5rem;
+            gap: 20px;
         }
 
-        .navbar li {
+        .navbar .nav-links li {
             display: inline-block;
         }
 
-        .navbar a {
+        .navbar .nav-links a {
             color: #FFC700;
             text-decoration: none;
             font-size: 1rem;
+            font-weight: bold;
         }
 
-        .navbar a:hover {
+        .navbar .nav-links a:hover {
             color: #333;
         }
 
-        /* Pengurus Section */
+        /* Section: Susunan Pengurus */
         .pengurus-section {
             background-color: #FFC700;
             padding: 60px 20px;
@@ -68,28 +84,31 @@
         }
 
         .pengurus-section h2 {
-            font-size: 30px;
+            font-size: 2rem;
             margin-bottom: 20px;
             color: #333;
         }
 
+        /* Pengurus Cards */
         .pengurus-list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 20px;
+            justify-items: center;
         }
 
         .pengurus-card {
             background-color: #fff;
             border-radius: 10px;
             padding: 20px;
-            width: 250px;
+            width: 100%;
+            max-width: 300px;
             text-align: center;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
+        /* Image Responsiveness */
         .pengurus-card img {
             width: 100%;
             height: auto;
@@ -98,19 +117,20 @@
             border-radius: 10px;
         }
 
-        .pengurus-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-        }
-
         .pengurus-card h3 {
-            font-size: 20px;
+            font-size: 1.5rem;
             margin: 10px 0;
+            color: #333;
         }
 
         .pengurus-card p {
-            font-size: 16px;
+            font-size: 1rem;
             color: #555;
+        }
+
+        .pengurus-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         /* Contact Section */
@@ -118,12 +138,10 @@
             background-color: #fff;
             padding: 4rem 2rem;
             text-align: center;
-            max-width: 1200px;
-            margin: 0 auto;
         }
 
         .contact-section h2 {
-            font-size: 2.5rem;
+            font-size: 2rem;
             margin-bottom: 1.5rem;
         }
 
@@ -163,48 +181,66 @@
             margin-top: 2rem;
         }
 
-        /* Responsiveness */
+        /* Responsive Styles */
         @media (max-width: 768px) {
             .navbar {
                 flex-direction: column;
-                align-items: flex-start;
-                padding: 1rem;
-            }
-
-            .navbar ul {
-                flex-direction: column;
                 gap: 10px;
-                text-align: left;
             }
 
-            .pengurus-list {
+            .navbar .nav-links {
                 flex-direction: column;
+                align-items: center;
+            }
+
+            .navbar .nav-links li {
+                margin-bottom: 0.5rem;
+            }
+
+            .pengurus-section h2 {
+                font-size: 1.75rem;
             }
 
             .pengurus-card {
-                width: 90%;
+                width: 100%;
             }
         }
+
+        @media (max-width: 480px) {
+            .pengurus-section h2 {
+                font-size: 1.5rem;
+            }
+
+            .pengurus-card h3 {
+                font-size: 1.25rem;
+            }
+
+            .pengurus-card p {
+                font-size: 0.875rem;
+            }
+        }
+
     </style>
 </head>
 <body>
+    <!-- Header and Navbar -->
     <header>
-        <nav class="navbar">
+        <nav class="navbar container">
             <div class="logo-container">
-                <img src="logo.png" alt="Logo Organisasi" style="width: 60px; height: 60px;">
-                <h1 style="font-size: 28px; color: #FFC700;">PC IPM CIPUTAT</h1>
+                <img src="logo.png" alt="Logo Organisasi" class="logo">
+                <h1 style="color: #FFC700;">PC IPM CIPUTAT</h1>
             </div>
-            <ul>
+            <ul class="nav-links">
                 <li><a href="index.html">Beranda</a></li>
-                <li><a href="tentang.html">Tentang Kami</a></li>
+                <li><a href="index.html">Tentang Kami</a></li>
                 <li><a href="contact.html">Kontak</a></li>
             </ul>
         </nav>
     </header>
 
-     <section class="pengurus-section">
+    <!-- Susunan Pengurus Section -->
+    <section class="pengurus-section">
         <h2>Susunan Pengurus</h2>
-         <h3>Bidang Umum</h3>
         
         <!-- Ketua Umum -->
         <div class="pengurus-list">
