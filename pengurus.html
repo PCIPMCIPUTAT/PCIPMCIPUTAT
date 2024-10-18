@@ -523,20 +523,6 @@
 <footer>
     <p>&copy; 2024 PC IPM CIPUTAT. Semua hak dilindungi.</p>
 </footer>
-<script>
-    // Load contact section
-    fetch('contact')
-      .then(response => response.text())
-      .then(data => {
-          document.body.insertAdjacentHTML('beforeend', data);
-      });
 
-    // Load footer section
-    fetch('footer')
-      .then(response => response.text())
-      .then(data => {
-          document.body.insertAdjacentHTML('beforeend', data);
-      });
-</script>
 </body>
 </html>
