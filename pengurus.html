@@ -7,7 +7,16 @@
     <title>Susunan Pengurus Organisasi</title>
     <link rel="stylesheet" href="style.css">
     <style>
-       * {
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.png" type="image/x-icon">
+    <title>Susunan Pengurus Organisasi</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -19,76 +28,54 @@
             line-height: 1.6;
         }
 
-       header {
-    background-color: #ffffff;
-    color: #fff;
-    padding: 1rem 0;
-    text-align: center;
-}
+        header {
+            background-color: #ffffff;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
 
-@media (min-width: 1024px) {
-    .container {
-        width: 80%;
-        margin: 0 auto;
-        padding: 20px;
-    }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            padding: 20px;
+        }
 
-/* Style Navbar */
-.navbar {
-    background-color: #fff;
-    padding: 1rem 2rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
+        /* Navbar Styling */
+        .navbar {
+            background-color: #fff;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-}
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
 
-.nav-links li {
-    display: inline-block;
-}
+        .nav-links li {
+            display: inline-block;
+        }
 
-.nav-links a {
-    color: #FFC700;
-    text-decoration: none;
-    font-size: 1rem;
-}
+        .nav-links a {
+            color: #FFC700;
+            text-decoration: none;
+            font-size: 1rem;
+        }
 
-.nav-links a:hover {
-    color: #333;
-}
+        .nav-links a:hover {
+            color: #333;
+        }
 
-/* Responsive Navbar */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 1rem;
-    }
-
-    .nav-links {
-        flex-direction: column;
-        gap: 10px;
-        text-align: left;
-    }
-
-    .nav-links li {
-        margin-bottom: 0.5rem;
-    }
-}
-
-}
-
-        /* Section Style */
+        /* Pengurus Section */
         .pengurus-section {
             background-color: #FFC700;
             padding: 60px 20px;
@@ -118,17 +105,15 @@
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Membuat gambar responsif dan tidak terpotong */
         .pengurus-card img {
             width: 100%;
             height: auto;
-            max-height: 250px; /* Membatasi tinggi maksimal gambar */
-            object-fit: contain; /* Membuat gambar tetap proporsional tanpa terpotong */
+            max-height: 250px;
+            object-fit: contain;
             border-radius: 10px;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
-        /* Animasi pada hover */
         .pengurus-card:hover img {
             transform: scale(1.05);
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -149,64 +134,83 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
-      /* Contact Section */
-.contact-section {
-    background-color: #fff;
-    padding: 4rem 2rem;
-    text-align: center;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+        /* Contact Section */
+        .contact-section {
+            background-color: #fff;
+            padding: 4rem 2rem;
+            text-align: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-.contact-section h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1.5rem;
-}
+        .contact-section h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
 
-.contact-section p {
-    font-size: 1.2rem;
-}
+        .contact-section p {
+            font-size: 1.2rem;
+        }
 
-/* Social Media Links */
-.social-media {
-    background-color: white;
-    padding: 2rem;
-    text-align: center;
-}
+        /* Social Media Links */
+        .social-media {
+            background-color: white;
+            padding: 2rem;
+            text-align: center;
+        }
 
-.social-media h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-}
+        .social-media h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
 
-.social-links {
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
-}
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+        }
 
-.social-links img {
-    width: 40px;
-    height: 40px;
-}
+        .social-links img {
+            width: 40px;
+            height: 40px;
+        }
 
-/* Footer */
-footer {
-    background-color: white;
-    color: #FFC700;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-}
+        /* Footer */
+        footer {
+            background-color: white;
+            color: #FFC700;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 2rem;
+        }
 
-        /* Responsif */
-        @media (max-width: 768px) {
-            .pengurus-list {
-                flex-direction: column;
+        /* Responsiveness */
+        @media (min-width: 1024px) {
+            .container {
+                width: 80%;
+                margin: 0 auto;
             }
 
-            .navbar ul li a {
-                font-size: 14px;
+            .pengurus-list {
+                flex-direction: row;
+            }
+
+            .pengurus-card {
+                width: 250px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                flex-direction: column;
+                gap: 10px;
+                text-align: left;
             }
 
             .pengurus-section h2 {
@@ -215,6 +219,24 @@ footer {
 
             .pengurus-card {
                 width: 90%;
+            }
+
+            .pengurus-list {
+                flex-direction: column;
+            }
+
+            .pengurus-card img {
+                max-width: 100%;
+                height: auto;
+                object-fit: contain;
+            }
+
+            .pengurus-card h3 {
+                font-size: 18px;
+            }
+
+            .pengurus-card p {
+                font-size: 14px;
             }
         }
 
@@ -229,18 +251,18 @@ footer {
                 gap: 10px;
             }
 
+            .pengurus-section h2 {
+                font-size: 20px;
+            }
+
+            .pengurus-card {
+                width: 100%;
+            }
+
             .pengurus-card img {
                 max-width: 100%;
                 height: auto;
-                object-fit: contain; /* Menghindari gambar terpotong */
-            }
-
-            .pengurus-card h3 {
-                font-size: 18px;
-            }
-
-            .pengurus-card p {
-                font-size: 14px;
+                object-fit: contain;
             }
         }
     </style>
