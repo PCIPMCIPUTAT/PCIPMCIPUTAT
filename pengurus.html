@@ -14,9 +14,10 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background-color: #fffdfd;
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f9fc;
             line-height: 1.6;
+            color: #333;
         }
 
         header {
@@ -70,52 +71,69 @@
             text-decoration: none;
             font-size: 1rem;
             font-weight: bold;
+            transition: color 0.3s;
         }
 
         .navbar .nav-links a:hover {
             color: #333;
+            text-decoration: underline;
         }
 
         /* Susunan Pengurus Section */
-.pengurus-section {
-    background-color: #FFC700;
-    padding: 60px 20px;
-    text-align: center;
-}
+        .pengurus-section {
+            background-color: #FFC700;
+            padding: 60px 20px;
+            text-align: center;
+        }
 
-/* Pengurus List menggunakan Flexbox */
-.pengurus-list {
-    display: flex; /* Menggunakan flexbox */
-    flex-wrap: wrap; /* Memungkinkan elemen membungkus ke baris baru */
-    justify-content: center; /* Mengatur item agar berada di tengah */
-    gap: 20px; /* Jarak antara item */
-}
+        .pengurus-section h2 {
+            font-size: 2.5rem;
+            color: #fff;
+            margin-bottom: 1.5rem;
+        }
 
-/* Pengurus Card */
-.pengurus-card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    width: 300px; /* Ukuran tetap */
-    text-align: center;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
+        /* Pengurus List menggunakan Flexbox */
+        .pengurus-list {
+            display: flex; 
+            flex-wrap: wrap; 
+            justify-content: center; 
+            gap: 20px;
+        }
 
-/* Gambar Tidak Mengikuti Perubahan Ukuran */
-.pengurus-card img {
-    width: 250px; /* Ukuran gambar tetap */
-    height: 250px; /* Ukuran gambar tetap */
-    object-fit: cover; /* Agar gambar tetap proporsional */
-    border-radius: 10px;
-}
+        /* Pengurus Card */
+        .pengurus-card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
 
-/* Hover Effect */
-.pengurus-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-}
+        .pengurus-card img {
+            width: 250px; 
+            height: 250px;
+            object-fit: cover; 
+            border-radius: 10px;
+        }
 
+        .pengurus-card h3 {
+            margin: 15px 0 10px;
+            font-size: 1.25rem;
+            color: #333;
+        }
+
+        .pengurus-card p {
+            color: #666;
+            font-size: 1rem;
+        }
+
+        /* Hover Effect */
+        .pengurus-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
 
         /* Contact Section */
         .contact-section {
@@ -127,10 +145,12 @@
         .contact-section h2 {
             font-size: 2rem;
             margin-bottom: 1.5rem;
+            color: #FFC700;
         }
 
         .contact-section p {
             font-size: 1.2rem;
+            color: #666;
         }
 
         /* Social Media Links */
@@ -154,15 +174,25 @@
         .social-links img {
             width: 40px;
             height: 40px;
+            transition: transform 0.3s;
+        }
+
+        .social-links img:hover {
+            transform: scale(1.2);
         }
 
         /* Footer */
         footer {
-            background-color: white;
-            color: #FFC700;
+            background-color: #333;
+            color: #fff;
             text-align: center;
             padding: 1rem 0;
             margin-top: 2rem;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
         }
 
         /* Responsive Styles */
@@ -203,7 +233,6 @@
                 font-size: 0.875rem;
             }
         }
-
     </style>
 </head>
 <body>
@@ -226,26 +255,23 @@
     <section class="pengurus-section">
         <h2>Susunan Pengurus</h2>
         
-       <section class="pengurus-section">
-    <h2>Susunan Pengurus</h2>
-    <div class="pengurus-list">
-        <div class="pengurus-card">
-            <img src="ketuaumum.png" alt="Ketua Umum">
-            <h3>Zaidaan Al Farouq</h3>
-            <p>Ketua Umum</p>
-        </div>
-        <div class="pengurus-card">
-            <img src="sekum.jpg" alt="Sekretaris Umum">
-            <h3>Selfia Adinda Salsabila</h3>
-            <p>Sekretaris Umum</p>
-        </div>
+        <div class="pengurus-list">
+            <div class="pengurus-card">
+                <img src="ketuaumum.png" alt="Ketua Umum">
+                <h3>Zaidaan Al Farouq</h3>
+                <p>Ketua Umum</p>
+            </div>
+            <div class="pengurus-card">
+                <img src="sekum.jpg" alt="Sekretaris Umum">
+                <h3>Selfia Adinda Salsabila</h3>
+                <p>Sekretaris Umum</p>
+            </div>
             <div class="pengurus-card">
                 <img src="bendum.png" alt="Bendahara Umum">
                 <h3>Nur Juniawati</h3>
                 <p>Bendahara Umum</p>
             </div>
         </div>
-
         <!-- Bidang 1 -->
         <div class="bidang">
             <h3>Bidang Perkaderan</h3>
@@ -428,14 +454,8 @@
         </div>
     </section>
 
-  <section class="contact-section">
-        <h2>Kontak Kami</h2>
-        <p>Email: kamipcipmciputat@gmail.com</p>
-        <p>Telepon:</p>
-        <p>Zaidaan: 0856-1540-023</p>
-        <p>Selfi: 0895-3491-47641</p>
-    </section>
 
+    <!-- Social Media Section -->
     <section class="social-media">
         <h3>Ikuti Kami</h3>
         <div class="social-links">
@@ -443,16 +463,14 @@
                 <img src="instagram.png" alt="Instagram">
             </a>
             <a href="https://wa.me/628561540023" target="_blank">
-                <img src="whatsapp2.png" alt="WhatsApp">
-            </a>
-            <a href="mailto:kamipcipmciputat@gmail.com">
-                <img src="email.png" alt="Email">
+                <img src="whatsapp.png" alt="WhatsApp">
             </a>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2024 PC IPM CIPUTAT. Semua hak dilindungi.</p>
+        <p>&copy; 2024 PC IPM Ciputat. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
