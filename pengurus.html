@@ -7,79 +7,88 @@
     <title>Susunan Pengurus Organisasi</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        * {
+       * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #f7f9fc;
+            font-family: Arial, sans-serif;
+            background-color: #fffdfd;
             line-height: 1.6;
-            color: #333;
         }
 
-        header {
-            background-color: #ffffff;
-            padding: 1rem 0;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
+       header {
+    background-color: #ffffff;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
 
-        .container {
-            width: 90%;
-            margin: 0 auto;
-            max-width: 1200px;
-        }
+@media (min-width: 1024px) {
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 20px;
+    }
 
-        /* Navbar */
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.5rem 0;
-        }
+/* Style Navbar */
+.navbar {
+    background-color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
 
-        .navbar .logo-container {
-            display: flex;
-            align-items: center;
-        }
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
 
-        .navbar .logo-container img {
-            width: 50px;
-            height: 50px;
-            margin-right: 1rem;
-        }
+.nav-links li {
+    display: inline-block;
+}
 
-        .navbar .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
+.nav-links a {
+    color: #FFC700;
+    text-decoration: none;
+    font-size: 1rem;
+}
 
-        .navbar .nav-links li {
-            display: inline-block;
-        }
+.nav-links a:hover {
+    color: #333;
+}
 
-        .navbar .nav-links a {
-            color: #FFC700;
-            text-decoration: none;
-            font-size: 1rem;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
 
-        .navbar .nav-links a:hover {
-            color: #333;
-            text-decoration: underline;
-        }
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+        text-align: left;
+    }
 
-        /* Susunan Pengurus Section */
+    .nav-links li {
+        margin-bottom: 0.5rem;
+    }
+}
+
+}
+
+        /* Section Style */
         .pengurus-section {
             background-color: #FFC700;
             padding: 60px 20px;
@@ -87,191 +96,199 @@
         }
 
         .pengurus-section h2 {
-            font-size: 2.5rem;
-            color: #fff;
-            margin-bottom: 1.5rem;
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: #333;
         }
 
-        /* Pengurus List menggunakan Flexbox */
         .pengurus-list {
-            display: flex; 
-            flex-wrap: wrap; 
-            justify-content: center; 
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
             gap: 20px;
         }
 
-        /* Pengurus Card */
         .pengurus-card {
             background-color: #fff;
             border-radius: 10px;
             padding: 20px;
-            width: 300px;
+            width: 250px;
             text-align: center;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
         }
 
+        /* Membuat gambar responsif dan tidak terpotong */
         .pengurus-card img {
-            width: 250px; 
-            height: 250px;
-            object-fit: cover; 
+            width: 100%;
+            height: auto;
+            max-height: 250px; /* Membatasi tinggi maksimal gambar */
+            object-fit: contain; /* Membuat gambar tetap proporsional tanpa terpotong */
             border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        /* Animasi pada hover */
+        .pengurus-card:hover img {
+            transform: scale(1.05);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
         .pengurus-card h3 {
-            margin: 15px 0 10px;
-            font-size: 1.25rem;
-            color: #333;
+            font-size: 20px;
+            margin: 10px 0;
         }
 
         .pengurus-card p {
-            color: #666;
-            font-size: 1rem;
+            font-size: 16px;
+            color: #555;
         }
 
-        /* Hover Effect */
         .pengurus-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
         }
 
-        /* Contact Section */
-        .contact-section {
-            background-color: #fff;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
+      /* Contact Section */
+.contact-section {
+    background-color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
-        .contact-section h2 {
-            font-size: 2rem;
-            margin-bottom: 1.5rem;
-            color: #FFC700;
-        }
+.contact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
 
-        .contact-section p {
-            font-size: 1.2rem;
-            color: #666;
-        }
+.contact-section p {
+    font-size: 1.2rem;
+}
 
-        /* Social Media Links */
-        .social-media {
-            background-color: white;
-            padding: 2rem;
-            text-align: center;
-        }
+/* Social Media Links */
+.social-media {
+    background-color: white;
+    padding: 2rem;
+    text-align: center;
+}
 
-        .social-media h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
+.social-media h3 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
 
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-        }
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
 
-        .social-links img {
-            width: 40px;
-            height: 40px;
-            transition: transform 0.3s;
-        }
+.social-links img {
+    width: 40px;
+    height: 40px;
+}
 
-        .social-links img:hover {
-            transform: scale(1.2);
-        }
+/* Footer */
+footer {
+    background-color: white;
+    color: #FFC700;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
 
-        /* Footer */
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 1rem 0;
-            margin-top: 2rem;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9rem;
-        }
-
-        /* Responsive Styles */
+        /* Responsif */
         @media (max-width: 768px) {
-            .navbar {
+            .pengurus-list {
                 flex-direction: column;
-                gap: 10px;
             }
 
-            .navbar .nav-links {
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .navbar .nav-links li {
-                margin-bottom: 0.5rem;
+            .navbar ul li a {
+                font-size: 14px;
             }
 
             .pengurus-section h2 {
-                font-size: 1.75rem;
+                font-size: 24px;
             }
 
             .pengurus-card {
-                width: 100%;
+                width: 90%;
             }
         }
 
         @media (max-width: 480px) {
-            .pengurus-section h2 {
-                font-size: 1.5rem;
+            .navbar {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .navbar ul {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            .pengurus-card img {
+                max-width: 100%;
+                height: auto;
+                object-fit: contain; /* Menghindari gambar terpotong */
             }
 
             .pengurus-card h3 {
-                font-size: 1.25rem;
+                font-size: 18px;
             }
 
             .pengurus-card p {
-                font-size: 0.875rem;
+                font-size: 14px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header and Navbar -->
     <header>
-        <nav class="navbar container">
-            <div class="logo-container">
-                <img src="logo.png" alt="Logo Organisasi" class="logo">
-                <h1 style="color: #FFC700;">PC IPM CIPUTAT</h1>
-            </div>
-            <ul class="nav-links">
-                <li><a href="index.html">Beranda</a></li>
-                <li><a href="index.html">Tentang Kami</a></li>
-                <li><a href="contact.html">Kontak</a></li>
-            </ul>
-        </nav>
-    </header>
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="logo.png" alt="Logo Organisasi" class="logo" style="width: 60px; height: 60px;">
+            <h1 class="organization-name" style="font-size: 28px; color: #FFC700;">PC IPM CIPUTAT</h1>
+        </div>
+        <ul class="nav-links" style="list-style: none; display: flex; gap: 20px;">
+            <li><a href="index.html" style="color: #FFC700; text-decoration: none; font-size: 16px;">Beranda</a></li>
+            <li><a href="index.html" style="color: #FFC700; text-decoration: none; font-size: 16px;">Tentang Kami</a></li>
+            <li><a href="contact.html" style="color: #FFC700; text-decoration: none; font-size: 16px;">Kontak</a></li>
+        </ul>
+    </nav>
+</header>
 
-    <!-- Susunan Pengurus Section -->
+
     <section class="pengurus-section">
-        <h2>Susunan Pengurus</h2>
-        
+        <h1>Susunan Pengurus</h1>
+        <h3>Bidang Umum</h3>
+        <!-- Ketua Umum -->
         <div class="pengurus-list">
             <div class="pengurus-card">
                 <img src="ketuaumum.png" alt="Ketua Umum">
                 <h3>Zaidaan Al Farouq</h3>
-                <p>Ketua Umum</p>
-            </div>
-            <div class="pengurus-card">
-                <img src="sekum.jpg" alt="Sekretaris Umum">
-                <h3>Selfia Adinda Salsabila</h3>
-                <p>Sekretaris Umum</p>
-            </div>
-            <div class="pengurus-card">
-                <img src="bendum.png" alt="Bendahara Umum">
-                <h3>Nur Juniawati</h3>
-                <p>Bendahara Umum</p>
+                <p><h4>Ketua Umum</h4></p>
             </div>
         </div>
+    </div>
+        <!-- Bidang Umum -->
+        <div class="sekumbendum">
+            <div class="pengurus-list">
+                <div class="pengurus-card">
+                    <img src="sekum.jpg" alt="Sekretaris Umum">
+                    <h3>Selfia Adinda Salsabila</h3>
+                    <p><h4>Sekretaris Umum</h4></p>
+                </div>
+                <div class="pengurus-card">
+                    <img src="bendum.png" alt="Bendahara Umum">
+                    <h3>Nur Juniawati</h3>
+                    <p><h4>Bendahara Umum</h4></p>
+                </div>
+            </div>
+        </div> 
+
         <!-- Bidang 1 -->
         <div class="bidang">
             <h3>Bidang Perkaderan</h3>
@@ -454,23 +471,50 @@
         </div>
     </section>
 
+  <!-- contact.html -->
+<section id="contact" class="contact-section">
+    <h2>Kontak Kami</h2>
+    <p>Hubungi kami melalui email: kamipcipmciputat@gmail.com</p>
+    <p>Telepon:</p>
+    <p>Zaidaan: 0856-1540-023</p>
+    <p>Selfi: 0895-3491-47641</p>
+</section>
 
-    <!-- Social Media Section -->
-    <section class="social-media">
-        <h3>Ikuti Kami</h3>
-        <div class="social-links">
-            <a href="https://www.instagram.com/ipmciputat?igsh=bTRiejVwbTMxZjFq" target="_blank">
-                <img src="instagram.png" alt="Instagram">
-            </a>
-            <a href="https://wa.me/628561540023" target="_blank">
-                <img src="whatsapp.png" alt="WhatsApp">
-            </a>
-        </div>
-    </section>
+<!-- Social Media Links -->
+<section class="social-media">
+    <h3>Ikuti Kami</h3>
+    <div class="social-links">
+        <a href="https://www.instagram.com/ipmciputat?igsh=bTRiejVwbTMxZjFq" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://wa.me/628561540023" target="_blank">
+            <img src="whatsapp2.png" alt="WhatsApp">
+        </a>
+        </a>
+        <a href="mailto:kamipcipmciputat@gmail.com">
+            <img src="email.png" alt="Email">
+        </a>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2024 PC IPM Ciputat. All Rights Reserved.</p>
-    </footer>
+<!-- Footer -->
+<footer>
+    <p>&copy; 2024 PC IPM CIPUTAT. Semua hak dilindungi.</p>
+</footer>
+<script>
+    // Load contact section
+    fetch('contact')
+      .then(response => response.text())
+      .then(data => {
+          document.body.insertAdjacentHTML('beforeend', data);
+      });
+
+    // Load footer section
+    fetch('footer')
+      .then(response => response.text())
+      .then(data => {
+          document.body.insertAdjacentHTML('beforeend', data);
+      });
+</script>
 </body>
 </html>
